@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import Header from "../../components/Header"
 import Hero from "../../components/Hero"
 import WhySoftSkills from "../../components/WhySoftSkills"
@@ -10,8 +11,24 @@ import WhatYouGet from "../../components/WhatYouGet"
 import Pricing from "../../components/Pricing"
 import ContactCTA from "../../components/ContactCTA"
 import Footer from "../../components/Footer"
-
 import { messages } from "../../messages/ru"
+
+export const metadata: Metadata = {
+  title: "G&T Power — Оцените свои Soft Skills",
+  description: "Научно обоснованный способ оценки четырёх лидерских компетенций. Узнайте свои суперсилы и получите детализированный отчёт.",
+  alternates: {
+    canonical: "https://gntpower.com/ru",
+    languages: { "uk": "https://gntpower.com/ua", "ru": "https://gntpower.com/ru", "en": "https://gntpower.com/en" },
+  },
+  openGraph: {
+    title: "G&T Power — Оцените свои Soft Skills",
+    description: "Научно обоснованный способ оценки четырёх лидерских компетенций.",
+    url: "https://gntpower.com/ru",
+    siteName: "G&T Power",
+    locale: "ru_RU",
+    type: "website",
+  },
+}
 
 export default function Page() {
   return (
