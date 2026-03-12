@@ -115,7 +115,7 @@ export const messages = {
     plans: [
       {
         name: "Personal access",
-        price: "$400",
+        price: "€340",
         features: [
           "Detailed report",
           "Data storage for one year",
