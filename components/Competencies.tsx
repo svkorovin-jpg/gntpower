@@ -47,7 +47,7 @@ export default function Competencies({ title, items }: CompetenciesProps) {
             )
             const textBlock = (
               <div className="flex flex-col justify-center flex-[1.5] px-2 md:px-8 py-6 md:py-0">
-                <h3 className="text-[22px] font-bold text-[#111] mb-3">{item.title}</h3>
+                <h3 className="text-[44px] font-bold text-[#111] mb-3">{item.title}</h3>
                 <p className="text-[32px] text-[#555] leading-relaxed m-0">{item.text}</p>
               </div>
             )
