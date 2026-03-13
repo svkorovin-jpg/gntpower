@@ -6,17 +6,17 @@ const DATA = {
   ua: {
     name: "G&T Power — Soft Skills оцінка",
     description: "Науково обґрунтований спосіб оцінки чотирьох лідерських компетенцій для менеджерів і учасників.",
-    url: "https://gntpower.com/ua",
+    url: "https://gntpower.vercel.app/ua",
   },
   ru: {
     name: "G&T Power — оценка Soft Skills",
     description: "Научно обоснованный способ оценки четырёх лидерских компетенций для менеджеров и участников.",
-    url: "https://gntpower.com/ru",
+    url: "https://gntpower.vercel.app/ru",
   },
   en: {
     name: "G&T Power — Soft Skills Assessment",
     description: "A scientifically sound way to assess four leadership competencies for managers and participants.",
-    url: "https://gntpower.com/en",
+    url: "https://gntpower.vercel.app/en",
   },
 }
 
@@ -27,8 +27,8 @@ export default function JsonLd({ lang }: JsonLdProps) {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "G&T Power",
-    url: "https://gntpower.com",
-    logo: "https://gntpower.com/photo.png",
+    url: "https://gntpower.vercel.app",
+    logo: "https://gntpower.vercel.app/photo.png",
     contactPoint: {
       "@type": "ContactPoint",
       email: "hello@gntpower.com",
