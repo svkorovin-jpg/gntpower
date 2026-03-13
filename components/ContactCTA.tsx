@@ -1,4 +1,6 @@
+"use client"
 import FadeIn from "./FadeIn"
+import { trackEvent } from "@/lib/analytics"
 
 type ContactCTAProps = {
   title: string
@@ -27,12 +29,14 @@ export default function ContactCTA({ title, subtitle, button, email, emailSubjec
             href="https://app.gntpower.com/demo"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackEvent("cta_click", { location: "contact", button: "demo" })}
             className="w-full sm:w-auto py-4 px-9 text-[16px] font-bold rounded-lg bg-white text-[#308F16] no-underline shadow-lg text-center hover:bg-gray-50 hover:shadow-xl active:scale-95 transition-all duration-200"
           >
             {button}
           </a>
           <a
             href={`mailto:${email}?subject=${encodeURIComponent(emailSubject)}`}
+            onClick={() => trackEvent("cta_click", { location: "contact", button: "email" })}
             className="w-full sm:w-auto py-4 px-9 text-[16px] font-semibold rounded-lg bg-transparent text-white no-underline border-2 border-white/60 text-center hover:bg-white/10 active:scale-95 transition-all duration-200"
           >
             {email}

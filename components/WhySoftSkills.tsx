@@ -1,4 +1,6 @@
+"use client"
 import FadeIn from "./FadeIn"
+import { trackEvent } from "@/lib/analytics"
 
 type WhySoftSkillsProps = {
   title: string
@@ -21,6 +23,7 @@ export default function WhySoftSkills({ title, tagline, text, button }: WhySoftS
             href="https://app.gntpower.com/demo"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackEvent("cta_click", { location: "why_soft_skills", button: "demo" })}
             className="inline-block py-[14px] px-8 rounded-lg bg-[#308F16] text-white font-bold text-[15px] no-underline hover:bg-[#267a12] active:scale-95 transition-all duration-200"
           >
             {button}

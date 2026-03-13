@@ -1,5 +1,6 @@
 "use client"
 import { useEffect, useState } from "react"
+import { trackEvent } from "@/lib/analytics"
 
 type NavMessages = {
   what: string
@@ -117,6 +118,7 @@ export default function Header({ nav, lang }: HeaderProps) {
           href="https://app.gntpower.com/demo"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackEvent("cta_click", { location: "header", button: "demo" })}
           className="hidden md:inline-block py-[10px] px-5 text-[14px] font-semibold rounded-[6px] bg-[#308F16] text-white no-underline whitespace-nowrap hover:bg-[#267a12] transition-colors duration-200"
         >
           {nav.demo}

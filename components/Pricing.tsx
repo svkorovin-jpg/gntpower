@@ -1,3 +1,6 @@
+"use client"
+import { trackEvent } from "@/lib/analytics"
+
 type Plan = {
   name: string
   price: string | null
@@ -72,6 +75,7 @@ export default function Pricing({ title, plans }: PricingProps) {
                 href={plan.link}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackEvent("cta_click", { location: "pricing", plan: plan.name })}
                 className="block py-4 px-6 rounded-lg font-bold text-[15px] no-underline text-center"
                 style={{
                   background: plan.highlight ? "#fff" : "#308F16",

@@ -1,4 +1,6 @@
+"use client"
 import FadeIn from "./FadeIn"
+import { trackEvent } from "@/lib/analytics"
 
 type HeroProps = {
   title: string
@@ -29,6 +31,7 @@ export default function Hero({ title, subtitle, description, button, buttonSecon
             href="https://app.gntpower.com/demo"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackEvent("cta_click", { location: "hero", button: "demo" })}
             className="w-full sm:w-auto py-4 px-9 text-base font-bold rounded-lg bg-white text-[#308F16] no-underline shadow-lg text-center hover:bg-gray-50 hover:shadow-xl active:scale-95 transition-all duration-200"
           >
             {button}
@@ -37,6 +40,7 @@ export default function Hero({ title, subtitle, description, button, buttonSecon
             href="https://app.gntpower.com/"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackEvent("cta_click", { location: "hero", button: "key" })}
             className="w-full sm:w-auto py-4 px-9 text-base font-bold rounded-lg bg-transparent text-white no-underline border-2 border-white/60 text-center hover:bg-white/10 active:scale-95 transition-all duration-200"
           >
             {buttonSecondary}
