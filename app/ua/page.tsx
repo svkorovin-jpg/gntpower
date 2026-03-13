@@ -12,6 +12,7 @@ import Pricing from "../../components/Pricing"
 import ContactCTA from "../../components/ContactCTA"
 import Footer from "../../components/Footer"
 import SectionTracker from "../../components/SectionTracker"
+import JsonLd from "../../components/JsonLd"
 import { messages } from "../../messages/ua"
 
 export const metadata: Metadata = {
@@ -28,12 +29,14 @@ export const metadata: Metadata = {
     siteName: "G&T Power",
     locale: "uk_UA",
     type: "website",
+    images: [{ url: "https://gntpower.com/og-image.png", width: 1200, height: 630 }],
   },
 }
 
 export default function Page() {
   return (
     <main>
+      <JsonLd lang="ua" />
       <SectionTracker />
       <Header nav={messages.nav} lang="ua" />
       <Hero
