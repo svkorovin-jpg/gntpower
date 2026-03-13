@@ -88,6 +88,7 @@ export default function Header({ nav, lang }: HeaderProps) {
                 <a
                   key={l}
                   href={`/${l}`}
+                  onClick={() => trackEvent("language_switch", { from: lang, to: l })}
                   className="block px-4 py-2 text-[13px] font-medium text-[#555] uppercase no-underline hover:bg-[#f7fdf4] hover:text-[#308F16] transition-colors duration-150"
                 >
                   {LANG_LABELS[l]}

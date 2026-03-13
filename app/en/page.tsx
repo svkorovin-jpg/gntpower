@@ -11,6 +11,7 @@ import WhatYouGet from "../../components/WhatYouGet"
 import Pricing from "../../components/Pricing"
 import ContactCTA from "../../components/ContactCTA"
 import Footer from "../../components/Footer"
+import SectionTracker from "../../components/SectionTracker"
 import { messages } from "../../messages/en"
 
 export const metadata: Metadata = {
@@ -33,6 +34,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main>
+      <SectionTracker />
       <Header nav={messages.nav} lang="en" />
       <Hero
         title={messages.hero.title}
