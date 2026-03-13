@@ -1,3 +1,4 @@
+import Image from "next/image"
 import FadeIn from "./FadeIn"
 
 const ICONS = ["🧩", "🎯", "⚡", "🤝"]
@@ -25,7 +26,19 @@ export default function Competencies({ title, items }: CompetenciesProps) {
               key={i}
               className="bg-[#f7fdf4] border border-[#EDEDED] rounded-2xl p-8 md:p-10 text-left hover:shadow-md hover:-translate-y-1 transition-all duration-200"
             >
-              <div className="text-[36px] leading-none mb-5">{ICONS[i]}</div>
+              {i === 0 ? (
+                <div className="mb-5 w-[64px] h-[64px] relative">
+                  <Image
+                    src="/systemic.png"
+                    alt={item.title}
+                    fill
+                    className="object-contain"
+                    style={{ mixBlendMode: "multiply" }}
+                  />
+                </div>
+              ) : (
+                <div className="text-[36px] leading-none mb-5">{ICONS[i]}</div>
+              )}
               <h3 className="text-[18px] font-bold text-[#111] mb-3">{item.title}</h3>
               <p className="text-[15px] text-[#555] leading-relaxed m-0">{item.text}</p>
             </div>
