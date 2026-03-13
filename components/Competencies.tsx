@@ -2,7 +2,7 @@ import Image from "next/image"
 import FadeIn from "./FadeIn"
 
 const ICONS = ["🧩", "🎯", "⚡", "🤝"]
-const IMAGES: (string | null)[] = ["/systemic.png", "/result.png", null, null]
+const IMAGES: (string | null)[] = ["/systemic.png", "/result.png", "/adapt.png", null]
 
 type CompetencyItem = {
   title: string
