@@ -2,6 +2,7 @@ import Image from "next/image"
 import FadeIn from "./FadeIn"
 
 const ICONS = ["🧩", "🎯", "⚡", "🤝"]
+const IMAGES: (string | null)[] = ["/systemic.png", null, null, null]
 
 type CompetencyItem = {
   title: string
@@ -15,34 +16,61 @@ type CompetenciesProps = {
 
 export default function Competencies({ title, items }: CompetenciesProps) {
   return (
-    <section className="bg-white py-14 px-5 md:py-[100px] md:px-10 text-center">
+    <section className="bg-white py-14 px-5 md:py-[100px] md:px-10">
       <FadeIn>
-        <h2 className="font-extrabold text-[#111] tracking-[-0.5px] mb-12 md:mb-[60px]" style={{ fontSize: "clamp(28px, 3vw, 42px)" }}>
+        <h2
+          className="font-extrabold text-[#111] tracking-[-0.5px] mb-12 md:mb-[60px] text-center"
+          style={{ fontSize: "clamp(28px, 3vw, 42px)" }}
+        >
           {title}
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-[1100px] mx-auto">
-          {items.map((item, i) => (
-            <div
-              key={i}
-              className="bg-[#f7fdf4] border border-[#EDEDED] rounded-2xl p-8 md:p-10 text-left hover:shadow-md hover:-translate-y-1 transition-all duration-200"
-            >
-              {i === 0 ? (
-                <div className="mb-5 w-[64px] h-[64px] relative">
-                  <Image
-                    src="/systemic.png"
-                    alt={item.title}
-                    fill
-                    className="object-contain"
-                    style={{ mixBlendMode: "multiply" }}
-                  />
-                </div>
-              ) : (
-                <div className="text-[36px] leading-none mb-5">{ICONS[i]}</div>
-              )}
-              <h3 className="text-[18px] font-bold text-[#111] mb-3">{item.title}</h3>
-              <p className="text-[15px] text-[#555] leading-relaxed m-0">{item.text}</p>
-            </div>
-          ))}
+        <div className="flex flex-col gap-6 max-w-[1100px] mx-auto">
+          {items.map((item, i) => {
+            const imageLeft = i % 2 === 0
+            const imgSrc = IMAGES[i]
+            const imageBlock = (
+              <div className="flex items-center justify-center bg-[#f0faea] rounded-2xl min-h-[220px] flex-1">
+                {imgSrc ? (
+                  <div className="relative w-full h-[220px]">
+                    <Image
+                      src={imgSrc}
+                      alt={item.title}
+                      fill
+                      className="object-contain p-8"
+                      style={{ mixBlendMode: "multiply" }}
+                    />
+                  </div>
+                ) : (
+                  <span className="text-[80px] leading-none">{ICONS[i]}</span>
+                )}
+              </div>
+            )
+            const textBlock = (
+              <div className="flex flex-col justify-center flex-[1.5] px-2 md:px-8 py-6 md:py-0">
+                <h3 className="text-[22px] font-bold text-[#111] mb-3">{item.title}</h3>
+                <p className="text-[16px] text-[#555] leading-relaxed m-0">{item.text}</p>
+              </div>
+            )
+            return (
+              <div
+                key={i}
+                className="bg-[#f7fdf4] border border-[#EDEDED] rounded-2xl overflow-hidden hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col md:flex-row"
+              >
+                {imageLeft ? (
+                  <>
+                    {imageBlock}
+                    {textBlock}
+                  </>
+                ) : (
+                  <>
+                    <div className="md:hidden">{imageBlock}</div>
+                    {textBlock}
+                    <div className="hidden md:flex flex-1">{imageBlock}</div>
+                  </>
+                )}
+              </div>
+            )
+          })}
         </div>
       </FadeIn>
     </section>
