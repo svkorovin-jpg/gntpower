@@ -29,9 +29,9 @@ export default function Competencies({ title, items }: CompetenciesProps) {
             const imageLeft = i % 2 === 0
             const imgSrc = IMAGES[i]
             const imageBlock = (
-              <div className="flex items-center justify-center bg-[#f0faea] rounded-2xl min-h-[286px] flex-1">
+              <div className="flex items-center justify-center bg-[#f0faea] rounded-2xl min-h-[372px] flex-1">
                 {imgSrc ? (
-                  <div className="relative w-full h-[286px]">
+                  <div className="relative w-full h-[372px]">
                     <Image
                       src={imgSrc}
                       alt={item.title}
