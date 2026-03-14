@@ -19,17 +19,17 @@ export const metadata: Metadata = {
   title: "G&T Power — Evaluate your Soft Skills",
   description: "A scientifically sound way to assess four leadership competencies. Discover your superpowers and get a detailed report to build your career.",
   alternates: {
-    canonical: "https://gntpower.vercel.app/en",
-    languages: { "uk": "https://gntpower.vercel.app/ua", "ru": "https://gntpower.vercel.app/ru", "en": "https://gntpower.vercel.app/en" },
+    canonical: "https://gntpower.com/en",
+    languages: { "uk": "https://gntpower.com/ua", "ru": "https://gntpower.com/ru", "en": "https://gntpower.com/en" },
   },
   openGraph: {
     title: "G&T Power — Evaluate your Soft Skills",
     description: "A scientifically sound way to assess four leadership competencies.",
-    url: "https://gntpower.vercel.app/en",
+    url: "https://gntpower.com/en",
     siteName: "G&T Power",
     locale: "en_US",
     type: "website",
-    images: [{ url: "https://gntpower.vercel.app/og-image.png", width: 1200, height: 630 }],
+    images: [{ url: "https://gntpower.com/og-image.png", width: 1200, height: 630 }],
   },
 }
 
