@@ -87,9 +87,6 @@ export default function Page() {
       <ContactCTA
         title={messages.contact.title}
         subtitle={messages.contact.subtitle}
-        button={messages.contact.button}
-        email={messages.contact.email}
-        emailSubject={messages.contact.emailSubject}
         form={messages.contact.form}
       />
       <Footer />

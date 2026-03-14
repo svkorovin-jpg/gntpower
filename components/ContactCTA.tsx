@@ -1,6 +1,5 @@
 "use client"
 import FadeIn from "./FadeIn"
-import { trackEvent } from "@/lib/analytics"
 import ContactForm from "./ContactForm"
 
 type ContactFormStrings = {
@@ -16,13 +15,10 @@ type ContactFormStrings = {
 type ContactCTAProps = {
   title: string
   subtitle: string
-  button: string
-  email: string
-  emailSubject: string
   form: ContactFormStrings
 }
 
-export default function ContactCTA({ title, subtitle, button, email, emailSubject, form }: ContactCTAProps) {
+export default function ContactCTA({ title, subtitle, form }: ContactCTAProps) {
   return (
     <section
       id="contact"
@@ -36,24 +32,6 @@ export default function ContactCTA({ title, subtitle, button, email, emailSubjec
           {title}
         </h2>
         <p className="text-[16px] md:text-[18px] opacity-90 max-w-[520px] mx-auto mb-10 leading-relaxed">{subtitle}</p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a
-            href="https://app.gntpower.com/demo"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => trackEvent("cta_click", { location: "contact", button: "demo" })}
-            className="w-full sm:w-auto py-4 px-9 text-[16px] font-bold rounded-lg bg-white text-[#308F16] no-underline shadow-lg text-center hover:bg-gray-50 hover:shadow-xl active:scale-95 transition-all duration-200"
-          >
-            {button}
-          </a>
-          <a
-            href={`mailto:${email}?subject=${encodeURIComponent(emailSubject)}`}
-            onClick={() => trackEvent("cta_click", { location: "contact", button: "email" })}
-            className="w-full sm:w-auto py-4 px-9 text-[16px] font-semibold rounded-lg bg-transparent text-white no-underline border-2 border-white/60 text-center hover:bg-white/10 active:scale-95 transition-all duration-200"
-          >
-            {email}
-          </a>
-        </div>
         <ContactForm {...form} />
       </FadeIn>
     </section>
