@@ -89,7 +89,7 @@ export default function Page() {
         subtitle={messages.contact.subtitle}
         form={messages.contact.form}
       />
-      <Footer />
+      <Footer lang="en" />
     </main>
   )
 }
