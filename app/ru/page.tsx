@@ -90,7 +90,7 @@ export default function Page() {
         button={messages.contact.button}
         email={messages.contact.email}
         emailSubject={messages.contact.emailSubject}
-        lang="ru"
+        form={messages.contact.form}
       />
       <Footer />
     </main>

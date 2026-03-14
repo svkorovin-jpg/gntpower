@@ -148,5 +148,14 @@ export const messages = {
     button: "Try the game",
     email: "info@gntpower.com",
     emailSubject: "Message from website",
+    form: {
+      name: "Name",
+      email: "Email",
+      message: "Message",
+      submit: "Send",
+      sending: "Sending...",
+      success: "Message sent! We'll get back to you soon.",
+      error: "Failed to send. Please try again.",
+    },
   },
 }

@@ -1,41 +1,17 @@
 "use client"
 import { useState } from "react"
 
-const translations = {
-  ru: {
-    name: "Имя",
-    email: "Email",
-    message: "Сообщение",
-    submit: "Отправить",
-    sending: "Отправляем...",
-    success: "Сообщение отправлено! Мы свяжемся с вами.",
-    error: "Ошибка при отправке. Попробуйте снова.",
-  },
-  en: {
-    name: "Name",
-    email: "Email",
-    message: "Message",
-    submit: "Send",
-    sending: "Sending...",
-    success: "Message sent! We'll get back to you soon.",
-    error: "Failed to send. Please try again.",
-  },
-  ua: {
-    name: "Ім'я",
-    email: "Email",
-    message: "Повідомлення",
-    submit: "Надіслати",
-    sending: "Надсилаємо...",
-    success: "Повідомлення надіслано! Ми зв'яжемося з вами.",
-    error: "Помилка надсилання. Спробуйте ще раз.",
-  },
+type ContactFormProps = {
+  name: string
+  email: string
+  message: string
+  submit: string
+  sending: string
+  success: string
+  error: string
 }
 
-type Lang = keyof typeof translations
-
-export default function ContactForm({ lang = "ru" }: { lang?: Lang }) {
-  const t = translations[lang] ?? translations.ru
-
+export default function ContactForm({ name, email, message, submit, sending, success, error }: ContactFormProps) {
   const [form, setForm] = useState({ name: "", email: "", message: "" })
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
 
@@ -61,7 +37,7 @@ export default function ContactForm({ lang = "ru" }: { lang?: Lang }) {
       <input
         type="text"
         required
-        placeholder={t.name}
+        placeholder={name}
         value={form.name}
         onChange={(e) => setForm({ ...form, name: e.target.value })}
         className={inputClass}
@@ -69,7 +45,7 @@ export default function ContactForm({ lang = "ru" }: { lang?: Lang }) {
       <input
         type="email"
         required
-        placeholder={t.email}
+        placeholder={email}
         value={form.email}
         onChange={(e) => setForm({ ...form, email: e.target.value })}
         className={inputClass}
@@ -77,17 +53,17 @@ export default function ContactForm({ lang = "ru" }: { lang?: Lang }) {
       <textarea
         required
         rows={4}
-        placeholder={t.message}
+        placeholder={message}
         value={form.message}
         onChange={(e) => setForm({ ...form, message: e.target.value })}
         className={inputClass + " resize-none"}
       />
 
       {status === "success" && (
-        <p className="text-white font-semibold text-center">{t.success}</p>
+        <p className="text-white font-semibold text-center">{success}</p>
       )}
       {status === "error" && (
-        <p className="text-red-200 font-semibold text-center">{t.error}</p>
+        <p className="text-red-200 font-semibold text-center">{error}</p>
       )}
 
       <button
@@ -95,7 +71,7 @@ export default function ContactForm({ lang = "ru" }: { lang?: Lang }) {
         disabled={status === "loading" || status === "success"}
         className="py-4 px-9 rounded-lg bg-white text-[#308F16] font-bold text-[16px] shadow-lg hover:bg-gray-50 hover:shadow-xl active:scale-95 transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        {status === "loading" ? t.sending : t.submit}
+        {status === "loading" ? sending : submit}
       </button>
     </form>
   )

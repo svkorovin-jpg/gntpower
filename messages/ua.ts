@@ -147,5 +147,14 @@ export const messages = {
     button: "Спробувати гру",
     email: "info@gntpower.com",
     emailSubject: "Повідомлення з сайту",
+    form: {
+      name: "Ім'я",
+      email: "Email",
+      message: "Повідомлення",
+      submit: "Надіслати",
+      sending: "Надсилаємо...",
+      success: "Повідомлення надіслано! Ми зв'яжемося з вами.",
+      error: "Помилка надсилання. Спробуйте ще раз.",
+    },
   },
 }
