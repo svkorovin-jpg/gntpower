@@ -1,6 +1,7 @@
 "use client"
 import FadeIn from "./FadeIn"
 import { trackEvent } from "@/lib/analytics"
+import ContactForm from "./ContactForm"
 
 type ContactCTAProps = {
   title: string
@@ -8,9 +9,10 @@ type ContactCTAProps = {
   button: string
   email: string
   emailSubject: string
+  lang?: "ru" | "en" | "ua"
 }
 
-export default function ContactCTA({ title, subtitle, button, email, emailSubject }: ContactCTAProps) {
+export default function ContactCTA({ title, subtitle, button, email, emailSubject, lang = "ru" }: ContactCTAProps) {
   return (
     <section
       id="contact"
@@ -42,6 +44,7 @@ export default function ContactCTA({ title, subtitle, button, email, emailSubjec
             {email}
           </a>
         </div>
+        <ContactForm lang={lang} />
       </FadeIn>
     </section>
   )
