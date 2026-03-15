@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     canonical:
       "https://gntpower.com/ru/kak-opredelit-liderov-v-komande",
     languages: {
-      ua: "https://gntpower.com/ua/yak-vyznachyty-lideriv-u-komandi",
+      uk: "https://gntpower.com/ua/yak-vyznachyty-lideriv-u-komandi",
     },
   },
 }

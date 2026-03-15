@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     canonical:
       "https://gntpower.com/ru/assessment-center-vs-online-ocenka",
     languages: {
-      ua: "https://gntpower.com/ua/assessment-center-vs-online-otsinka",
+      uk: "https://gntpower.com/ua/assessment-center-vs-online-otsinka",
     },
   },
 }

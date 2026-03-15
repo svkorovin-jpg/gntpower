@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://gntpower.com/ru/kak-ponyat-svoi-silnye-storony",
     languages: {
-      ua: "https://gntpower.com/ua/yak-zrozumity-svoi-sylni-storony",
+      uk: "https://gntpower.com/ua/yak-zrozumity-svoi-sylni-storony",
     },
   },
 }

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://gntpower.com/ru/chto-takoe-sjt",
     languages: {
-      ua: "https://gntpower.com/ua/shcho-take-sjt",
+      uk: "https://gntpower.com/ua/shcho-take-sjt",
     },
   },
 }

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     canonical:
       "https://gntpower.com/ru/ocenka-upravlencheskogo-potenciala",
     languages: {
-      ua: "https://gntpower.com/ua/otsinka-upravlinskoho-potentsialu",
+      uk: "https://gntpower.com/ua/otsinka-upravlinskoho-potentsialu",
     },
   },
 }

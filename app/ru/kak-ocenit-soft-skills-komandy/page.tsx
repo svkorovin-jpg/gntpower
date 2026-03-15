@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://gntpower.com/ru/kak-ocenit-soft-skills-komandy",
     languages: {
-      ua: "https://gntpower.com/ua/yak-otsinyty-soft-skills-komandy",
+      uk: "https://gntpower.com/ua/yak-otsinyty-soft-skills-komandy",
     },
   },
 }

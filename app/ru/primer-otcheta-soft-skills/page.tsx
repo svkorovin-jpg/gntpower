@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://gntpower.com/ru/primer-otcheta-soft-skills",
     languages: {
-      ua: "https://gntpower.com/ua/pryklad-zvitu-soft-skills",
+      uk: "https://gntpower.com/ua/pryklad-zvitu-soft-skills",
     },
   },
 }
