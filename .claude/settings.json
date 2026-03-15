@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wc -l /Users/SergeyKorovin/Git/softskills-site/components/*.tsx /Users/SergeyKorovin/Git/softskills-site/app/*.tsx /Users/SergeyKorovin/Git/softskills-site/app/en/*.tsx)",
+      "WebFetch(domain:www.innerly.me)"
+    ]
+  }
+}

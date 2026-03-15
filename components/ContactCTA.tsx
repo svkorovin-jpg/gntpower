@@ -10,6 +10,10 @@ type ContactFormStrings = {
   sending: string
   success: string
   error: string
+  privacyPre: string
+  privacyLink: string
+  privacyPost: string
+  privacyUrl: string
 }
 
 type ContactCTAProps = {

@@ -156,6 +156,10 @@ export const messages = {
       sending: "Sending...",
       success: "Message sent! We'll get back to you soon.",
       error: "Failed to send. Please try again.",
+      privacyPre: "By submitting this form you agree to your data being processed in accordance with our",
+      privacyLink: "Privacy Policy",
+      privacyPost: ". We will use your details solely to respond to your enquiry.",
+      privacyUrl: "/en/privacy",
     },
   },
 }

@@ -1,5 +1,6 @@
 "use client"
 import { useState } from "react"
+import Link from "next/link"
 
 type ContactFormProps = {
   name: string
@@ -9,9 +10,13 @@ type ContactFormProps = {
   sending: string
   success: string
   error: string
+  privacyPre: string
+  privacyLink: string
+  privacyPost: string
+  privacyUrl: string
 }
 
-export default function ContactForm({ name, email, message, submit, sending, success, error }: ContactFormProps) {
+export default function ContactForm({ name, email, message, submit, sending, success, error, privacyPre, privacyLink, privacyPost, privacyUrl }: ContactFormProps) {
   const [form, setForm] = useState({ name: "", email: "", message: "" })
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
 
@@ -73,6 +78,14 @@ export default function ContactForm({ name, email, message, submit, sending, suc
       >
         {status === "loading" ? sending : submit}
       </button>
+
+      <p className="text-white/70 text-[13px] text-center leading-snug">
+        {privacyPre}{" "}
+        <Link href={privacyUrl} className="underline hover:text-white transition-colors">
+          {privacyLink}
+        </Link>
+        {privacyPost}
+      </p>
     </form>
   )
 }
