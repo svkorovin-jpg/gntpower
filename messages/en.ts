@@ -30,11 +30,11 @@ export const messages = {
     title: "Four leadership competencies we assess",
     items: [
       {
-        title: "Systemic Understanding",
+        title: "Systemic Thinking",
         text: "Ability to see the big picture and analyse complex systems.",
       },
       {
-        title: "Ability to achieve a result",
+        title: "Execution Ability",
         text: "Drive to set ambitious goals and deliver on them consistently.",
       },
       {
@@ -42,7 +42,7 @@ export const messages = {
         text: "Capacity to adjust thinking and behaviour in changing conditions.",
       },
       {
-        title: "Effective communication with other people",
+        title: "Effective Communication",
         text: "Skill to build trust and influence people across contexts.",
       },
     ],
