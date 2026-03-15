@@ -45,12 +45,14 @@ export default function Page() {
         description={messages.hero.description}
         button={messages.hero.button}
         buttonSecondary={messages.hero.buttonSecondary}
+        lang="ru"
       />
       <WhySoftSkills
         title={messages.whySoftSkills.title}
         tagline={messages.whySoftSkills.tagline}
         text={messages.whySoftSkills.text}
         button={messages.whySoftSkills.button}
+        lang="ru"
       />
       <Competencies
         title={messages.competencies.title}
