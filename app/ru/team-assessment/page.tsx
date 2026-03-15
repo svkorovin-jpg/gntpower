@@ -278,6 +278,29 @@ export default function TeamAssessmentPage() {
           </div>
         </div>
       </section>
+
+      {/* Related articles */}
+      <section className="py-12 px-6 bg-white border-t border-[#EDEDED]">
+        <div className="max-w-[860px] mx-auto">
+          <h2 className="text-[20px] font-bold text-[#111] mb-6">Читайте также</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {[
+              { url: "/ru/kak-ocenit-soft-skills-komandy", label: "Как оценить soft skills команды" },
+              { url: "/ru/assessment-center-vs-online-ocenka", label: "Assessment center или онлайн-оценка" },
+              { url: "/ru/primer-otcheta-soft-skills", label: "Пример отчёта soft skills" },
+              { url: "/ru/chto-takoe-sjt", label: "Что такое SJT" },
+            ].map((page) => (
+              <Link
+                key={page.url}
+                href={page.url}
+                className="rounded-xl border border-[#EDEDED] px-5 py-4 text-[15px] font-medium text-[#308F16] no-underline hover:border-[#308F16] hover:bg-[#f7fdf4] transition-all duration-150 flex items-center gap-2"
+              >
+                <span className="shrink-0">→</span>{page.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
     </main>
   )
 }

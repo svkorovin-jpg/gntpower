@@ -325,6 +325,30 @@ export default function SoftSkillsTestPage() {
           </div>
         </div>
       </section>
+
+      {/* Related articles */}
+      <section className="py-12 px-6 bg-white border-t border-[#EDEDED]">
+        <div className="max-w-[860px] mx-auto">
+          <h2 className="text-[20px] font-bold text-[#111] mb-6">Читайте також</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {[
+              { url: "/ua/shcho-take-sjt", label: "Що таке SJT" },
+              { url: "/ua/soft-skills-test-online", label: "Онлайн тест soft skills" },
+              { url: "/ua/pryklad-zvitu-soft-skills", label: "Приклад звіту soft skills" },
+              { url: "/ua/rozvytok-soft-skills", label: "Розвиток soft skills" },
+              { url: "/ua/yak-zrozumity-svoi-sylni-storony", label: "Як зрозуміти свої сильні сторони" },
+            ].map((page) => (
+              <Link
+                key={page.url}
+                href={page.url}
+                className="rounded-xl border border-[#EDEDED] px-5 py-4 text-[15px] font-medium text-[#308F16] no-underline hover:border-[#308F16] hover:bg-[#f7fdf4] transition-all duration-150 flex items-center gap-2"
+              >
+                <span className="shrink-0">→</span>{page.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
     </main>
   )
 }
