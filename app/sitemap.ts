@@ -14,6 +14,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "https://gntpower.com/ua/team-assessment", lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: "https://gntpower.com/ru/team-assessment", lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: "https://gntpower.com/en/team-assessment", lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    // Career assessment landing pages
+    { url: "https://gntpower.com/ua/soft-skills-career-assessment", lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
+    { url: "https://gntpower.com/ru/soft-skills-career-assessment", lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     // Article pages UA
     { url: "https://gntpower.com/ua/yak-otsinyty-soft-skills-komandy", lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: "https://gntpower.com/ua/soft-skills-test-online", lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
