@@ -382,9 +382,9 @@ export default function SoftSkillsCareerPage() {
 
           <div className="grid sm:grid-cols-3 gap-4 mb-8">
             {[
-              { period: "До 31 березня", discount: "95%", price: "€8.50", highlight: true },
-              { period: "До 30 квітня", discount: "90%", price: "€17", highlight: false },
-              { period: "До 31 травня", discount: "85%", price: "€25.50", highlight: false },
+              { period: "До 31 березня", discount: "95%", price: "₴425", highlight: true },
+              { period: "До 30 квітня", discount: "90%", price: "₴850", highlight: false },
+              { period: "До 31 травня", discount: "85%", price: "₴1275", highlight: false },
             ].map((tier) => (
               <div
                 key={tier.period}
@@ -401,7 +401,7 @@ export default function SoftSkillsCareerPage() {
                 )}
                 <p className="text-[13px] text-[#555] mb-1">{tier.period}</p>
                 <p className="text-[28px] font-extrabold text-[#111]">{tier.price}</p>
-                <p className="text-[13px] text-[#555]">знижка {tier.discount} від €170</p>
+                <p className="text-[13px] text-[#555]">знижка {tier.discount} від ₴8500</p>
               </div>
             ))}
           </div>
@@ -412,7 +412,7 @@ export default function SoftSkillsCareerPage() {
               <p className="text-[22px] font-extrabold text-[#308F16] tracking-wider">VESNA26</p>
             </div>
             <p className="text-[14px] text-[#555] max-w-[400px]">
-              Введіть цей код при оплаті. Регулярна ціна — €170. Знижка діє до кінця травня 2026.
+              Введіть цей код при оплаті. Регулярна ціна — ₴8500. Знижка діє до кінця травня 2026.
             </p>
           </div>
 
