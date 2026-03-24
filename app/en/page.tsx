@@ -85,6 +85,7 @@ export default function Page() {
       <Pricing
         title={messages.pricing.title}
         plans={messages.pricing.plans}
+        lang="en"
       />
       <ContactCTA
         title={messages.contact.title}

@@ -1,5 +1,6 @@
 "use client"
 import { trackEvent } from "@/lib/analytics"
+import { setAppLocale } from "@/lib/locale"
 
 type Plan = {
   name: string
@@ -13,9 +14,10 @@ type Plan = {
 type PricingProps = {
   title: string
   plans: Plan[]
+  lang: string
 }
 
-export default function Pricing({ title, plans }: PricingProps) {
+export default function Pricing({ title, plans, lang }: PricingProps) {
   return (
     <section id="prices" className="bg-white border-t border-[#EDEDED] py-14 px-5 md:py-[100px] md:px-10">
       <div className="max-w-[960px] mx-auto">
@@ -75,7 +77,7 @@ export default function Pricing({ title, plans }: PricingProps) {
                 href={plan.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => trackEvent("cta_click", { location: "pricing", plan: plan.name })}
+                onClick={() => { setAppLocale(lang); trackEvent("cta_click", { location: "pricing", plan: plan.name }) }}
                 className="block py-4 px-6 rounded-lg font-bold text-[15px] no-underline text-center"
                 style={{
                   background: plan.highlight ? "#fff" : "#308F16",

@@ -104,6 +104,7 @@ export default function Header({ nav, lang }: HeaderProps) {
           href="https://client.gntpower.com/"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => setAppLocale(lang)}
           className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-[#308F16] shrink-0 hover:bg-[#308F16] transition-colors duration-200 group"
         >
           <img
