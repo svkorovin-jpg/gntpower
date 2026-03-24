@@ -7,16 +7,22 @@ const DATA = {
     name: "G&T Power — Soft Skills оцінка",
     description: "Науково обґрунтований спосіб оцінки чотирьох лідерських компетенцій для менеджерів і учасників.",
     url: "https://gntpower.com/ua",
+    price: "8500",
+    priceCurrency: "UAH",
   },
   ru: {
     name: "G&T Power — оценка Soft Skills",
     description: "Научно обоснованный способ оценки четырёх лидерских компетенций для менеджеров и участников.",
     url: "https://gntpower.com/ru",
+    price: "170",
+    priceCurrency: "EUR",
   },
   en: {
     name: "G&T Power — Soft Skills Assessment",
     description: "A scientifically sound way to assess four leadership competencies for managers and participants.",
     url: "https://gntpower.com/en",
+    price: "170",
+    priceCurrency: "EUR",
   },
 }
 
@@ -46,8 +52,8 @@ export default function JsonLd({ lang }: JsonLdProps) {
     brand: { "@type": "Brand", name: "G&T Power" },
     offers: {
       "@type": "Offer",
-      price: "340",
-      priceCurrency: "EUR",
+      price: d.price,
+      priceCurrency: d.priceCurrency,
       availability: "https://schema.org/InStock",
       url: "https://app.gntpower.com/demo",
     },
