@@ -618,96 +618,6 @@
       margin: 0 auto 48px;
     }
 
-    .cta-options {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-      max-width: 760px;
-      margin: 0 auto;
-    }
-
-    .cta-option {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 20px;
-      padding: 32px 28px;
-      text-align: left;
-    }
-
-    .cta-option-label {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--gray);
-      margin-bottom: 12px;
-    }
-
-    .cta-option h3 {
-      font-size: 17px;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-
-    .cta-option p {
-      font-size: 14px;
-      color: var(--gray);
-      margin-bottom: 20px;
-      line-height: 1.55;
-    }
-
-    .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: transparent;
-      border: 2px solid var(--green);
-      color: var(--green);
-      font-size: 15px;
-      font-weight: 700;
-      padding: 14px 24px;
-      border-radius: 12px;
-      text-decoration: none;
-      transition: background 0.2s, color 0.2s, transform 0.2s;
-      width: 100%;
-      justify-content: center;
-    }
-
-    .btn-secondary:hover {
-      background: var(--green);
-      color: var(--navy);
-      transform: translateY(-2px);
-    }
-
-    .email-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--white);
-      text-decoration: none;
-      padding: 14px 20px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 12px;
-      width: 100%;
-      justify-content: center;
-      margin-bottom: 10px;
-      transition: background 0.2s, border-color 0.2s;
-    }
-
-    .email-link:hover {
-      background: rgba(255,255,255,0.1);
-      border-color: rgba(255,255,255,0.25);
-    }
-
-    .email-note {
-      font-size: 12px;
-      color: var(--gray);
-      margin: 0 !important;
-      text-align: center;
-    }
 
     /* ════════════════════════════════
        FOOTER
@@ -1034,30 +944,10 @@
         <h2>Получить бесплатный доступ</h2>
         <p>Акция действует до 31 марта 2026. После — стандартная цена.</p>
 
-        <div class="cta-options">
-          <!-- Вариант А: есть ключ -->
-          <div class="cta-option">
-            <div class="cta-option-label">Вариант А — Есть ключ</div>
-            <h3>Уже есть ключ доступа?</h3>
-            <p>Переходи сразу на платформу и начинай игру. Никакой регистрации — только ключ.</p>
-            <a href="https://app.gntpower.com" class="btn-secondary">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
-              Перейти к тесту →
-            </a>
-          </div>
-
-          <!-- Вариант Б: нет ключа -->
-          <div class="cta-option">
-            <div class="cta-option-label">Вариант Б — Нужен ключ</div>
-            <h3>Нет ключа? Запросите бесплатно</h3>
-            <p>Напишите нам — мы активируем полную версию для вас в течение 24 часов.</p>
-            <a href="mailto:svkorovin@gmail.com?subject=Хочу ключ G%26T Power&body=Привет! Хочу получить бесплатный ключ для прохождения G%26T Power." class="email-link">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-              svkorovin@gmail.com
-            </a>
-            <p class="email-note">Напишите «Хочу ключ» — ответим за 24 часа</p>
-          </div>
-        </div>
+        <a href="https://app.gntpower.com" class="btn-primary" style="font-size:18px; padding:20px 48px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+          Начать бесплатно →
+        </a>
       </div>
     </div>
   </section>
