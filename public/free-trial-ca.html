@@ -14,43 +14,40 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <!-- GA4 TAG HERE -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YX41Z4PE1W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YX41Z4PE1W');
+  </script>
   <!-- META PIXEL HERE -->
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --navy: #1a1a2e;
-      --navy-light: #16213e;
-      --navy-card: #0f172a;
-      --purple: #6c63ff;
-      --purple-light: #8b83ff;
-      --green: #00c896;
-      --green-dark: #00a87e;
+      --green: #308F16;
+      --green-light: #63AF4F;
+      --green-dark: #267a12;
+      --green-bg: #f7fdf4;
+      --green-tint: rgba(48, 143, 22, 0.08);
       --white: #ffffff;
-      --gray: #94a3b8;
-      --gray-light: #cbd5e1;
+      --text: #111111;
+      --text-secondary: #555555;
+      --text-muted: #888888;
+      --border: #EDEDED;
     }
 
     html { scroll-behavior: smooth; }
 
     body {
       font-family: 'Inter', sans-serif;
-      background: var(--navy);
-      color: var(--white);
+      background: #fff;
+      color: var(--text);
       overflow-x: hidden;
       line-height: 1.6;
-    }
-
-    /* ── NOISE TEXTURE ── */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: 0;
     }
 
     /* ── LAYOUT ── */
@@ -83,7 +80,8 @@
       padding: 80px 0 60px;
       position: relative;
       overflow: hidden;
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #1a1535 70%, #0f0f23 100%);
+      background: linear-gradient(135deg, #308F16 0%, #63AF4F 100%);
+      color: #fff;
     }
 
     /* Geometric background shapes */
@@ -92,8 +90,8 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 600px 400px at 80% 20%, rgba(108, 99, 255, 0.18) 0%, transparent 70%),
-        radial-gradient(ellipse 400px 300px at 10% 80%, rgba(0, 200, 150, 0.10) 0%, transparent 60%);
+        radial-gradient(ellipse 600px 400px at 80% 20%, rgba(255,255,255,0.10) 0%, transparent 70%),
+        radial-gradient(ellipse 400px 300px at 10% 80%, rgba(0,0,0,0.08) 0%, transparent 60%);
       pointer-events: none;
     }
 
@@ -120,8 +118,8 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(0, 200, 150, 0.15);
-      border: 1px solid rgba(0, 200, 150, 0.4);
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.5);
       color: var(--green);
       font-size: 13px;
       font-weight: 600;
@@ -133,8 +131,8 @@
     }
 
     @keyframes pulse-border {
-      0%, 100% { box-shadow: 0 0 0 0 rgba(0, 200, 150, 0.3); }
-      50% { box-shadow: 0 0 0 8px rgba(0, 200, 150, 0); }
+      0%, 100% { box-shadow: 0 0 0 0 rgba(255,255,255,0.2); }
+      50% { box-shadow: 0 0 0 8px rgba(255,255,255,0); }
     }
 
     .hero h1 {
@@ -146,15 +144,13 @@
     }
 
     .hero h1 .accent {
-      background: linear-gradient(90deg, var(--purple-light), var(--green));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: #fff;
+      opacity: 0.9;
     }
 
     .hero-sub {
       font-size: clamp(16px, 2.5vw, 20px);
-      color: var(--gray-light);
+      color: rgba(255,255,255,0.88);
       max-width: 560px;
       margin-bottom: 40px;
       line-height: 1.6;
@@ -171,34 +167,34 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: linear-gradient(135deg, var(--purple) 0%, var(--purple-light) 100%);
-      color: var(--white);
+      background: #fff;
+      color: var(--green);
       font-size: 17px;
       font-weight: 700;
       padding: 18px 36px;
-      border-radius: 14px;
+      border-radius: 10px;
       text-decoration: none;
       border: none;
       cursor: pointer;
       transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 4px 30px rgba(108, 99, 255, 0.4);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.18);
       animation: cta-pulse 3s ease-in-out infinite;
     }
 
     .btn-primary:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 40px rgba(108, 99, 255, 0.6);
+      box-shadow: 0 8px 36px rgba(0,0,0,0.25);
       animation: none;
     }
 
     @keyframes cta-pulse {
-      0%, 100% { box-shadow: 0 4px 30px rgba(108, 99, 255, 0.4); }
-      50% { box-shadow: 0 4px 50px rgba(108, 99, 255, 0.7); }
+      0%, 100% { box-shadow: 0 4px 24px rgba(0,0,0,0.18); }
+      50% { box-shadow: 0 4px 36px rgba(0,0,0,0.28); }
     }
 
     .hero-note {
       font-size: 14px;
-      color: var(--gray);
+      color: rgba(255,255,255,0.7);
     }
 
     /* Countdown in hero */
@@ -207,15 +203,15 @@
       display: inline-flex;
       gap: 6px;
       align-items: center;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(0,0,0,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
       border-radius: 16px;
       padding: 16px 24px;
     }
 
     .countdown-hero-label {
       font-size: 13px;
-      color: var(--gray);
+      color: rgba(255,255,255,0.75);
       margin-right: 8px;
     }
 
@@ -228,7 +224,7 @@
     .cd-num {
       font-size: 28px;
       font-weight: 800;
-      color: var(--green);
+      color: #fff;
       line-height: 1;
       min-width: 44px;
       text-align: center;
@@ -236,7 +232,7 @@
 
     .cd-label {
       font-size: 10px;
-      color: var(--gray);
+      color: rgba(255,255,255,0.7);
       text-transform: uppercase;
       letter-spacing: 0.08em;
       margin-top: 2px;
@@ -245,7 +241,7 @@
     .cd-sep {
       font-size: 24px;
       font-weight: 800;
-      color: var(--gray);
+      color: rgba(255,255,255,0.6);
       padding-bottom: 10px;
     }
 
@@ -254,7 +250,7 @@
     ════════════════════════════════ */
     .what-is {
       padding: 100px 0;
-      background: var(--navy-light);
+      background: #f7fdf4;
     }
 
     .section-tag {
@@ -263,7 +259,7 @@
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--purple-light);
+      color: #fff;
       margin-bottom: 12px;
     }
 
@@ -277,7 +273,7 @@
 
     .section-sub {
       font-size: 17px;
-      color: var(--gray);
+      color: var(--text-secondary);
       max-width: 520px;
       margin-bottom: 56px;
     }
@@ -289,8 +285,8 @@
     }
 
     .card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.07);
+      background: #fff;
+      border: 1px solid var(--border);
       border-radius: 20px;
       padding: 32px;
       transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
@@ -298,8 +294,8 @@
 
     .card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-      border-color: rgba(108, 99, 255, 0.3);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+      border-color: var(--green);
     }
 
     .card-icon {
@@ -316,7 +312,7 @@
 
     .card p {
       font-size: 15px;
-      color: var(--gray);
+      color: var(--text-secondary);
       line-height: 1.65;
     }
 
@@ -325,6 +321,7 @@
     ════════════════════════════════ */
     .how-it-works {
       padding: 100px 0;
+      background: #fff;
     }
 
     .timeline {
@@ -342,7 +339,7 @@
       left: 10%;
       right: 10%;
       height: 2px;
-      background: linear-gradient(90deg, var(--purple), var(--green));
+      background: linear-gradient(90deg, var(--green), var(--green-light));
       opacity: 0.3;
     }
 
@@ -370,10 +367,10 @@
       flex-shrink: 0;
     }
 
-    .step-num.s1 { background: linear-gradient(135deg, #6c63ff, #8b83ff); box-shadow: 0 0 30px rgba(108,99,255,0.4); }
-    .step-num.s2 { background: linear-gradient(135deg, #8b63ff, #a083ff); box-shadow: 0 0 30px rgba(139,99,255,0.4); }
-    .step-num.s3 { background: linear-gradient(135deg, #a063ff, #00c896); box-shadow: 0 0 30px rgba(160,99,255,0.4); }
-    .step-num.s4 { background: linear-gradient(135deg, #00c896, #00a87e); box-shadow: 0 0 30px rgba(0,200,150,0.4); }
+    .step-num.s1 { background: linear-gradient(135deg, #308F16, #4aaa30); box-shadow: 0 0 30px rgba(48,143,22,0.3); }
+    .step-num.s2 { background: linear-gradient(135deg, #3da020, #55bb38); box-shadow: 0 0 30px rgba(61,160,32,0.3); }
+    .step-num.s3 { background: linear-gradient(135deg, #4cb42a, #63AF4F); box-shadow: 0 0 30px rgba(76,180,42,0.3); }
+    .step-num.s4 { background: linear-gradient(135deg, #63AF4F, #80c46a); box-shadow: 0 0 30px rgba(99,175,79,0.3); }
 
     .step-time {
       font-size: 11px;
@@ -392,7 +389,7 @@
 
     .step-desc {
       font-size: 14px;
-      color: var(--gray);
+      color: var(--text-secondary);
       line-height: 1.55;
     }
 
@@ -401,7 +398,7 @@
     ════════════════════════════════ */
     .competencies {
       padding: 100px 0;
-      background: var(--navy-light);
+      background: #f7fdf4;
     }
 
     .comp-grid {
@@ -416,8 +413,8 @@
     }
 
     .comp-item {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.07);
+      background: #fff;
+      border: 1px solid var(--border);
       border-radius: 16px;
       padding: 28px;
     }
@@ -440,8 +437,8 @@
       flex-shrink: 0;
     }
 
-    .comp-icon.c1 { background: rgba(108,99,255,0.2); }
-    .comp-icon.c2 { background: rgba(0,200,150,0.15); }
+    .comp-icon.c1 { background: rgba(48,143,22,0.12); }
+    .comp-icon.c2 { background: rgba(48,143,22,0.10); }
     .comp-icon.c3 { background: rgba(255,166,0,0.15); }
     .comp-icon.c4 { background: rgba(255,99,132,0.15); }
 
@@ -452,14 +449,14 @@
 
     .comp-desc {
       font-size: 14px;
-      color: var(--gray);
+      color: var(--text-secondary);
       margin-bottom: 18px;
       line-height: 1.55;
     }
 
     .progress-bar-wrap {
       height: 8px;
-      background: rgba(255,255,255,0.08);
+      background: #e8f5e2;
       border-radius: 100px;
       overflow: hidden;
     }
@@ -471,8 +468,8 @@
       transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .progress-bar.p1 { background: linear-gradient(90deg, var(--purple), var(--purple-light)); }
-    .progress-bar.p2 { background: linear-gradient(90deg, var(--green-dark), var(--green)); }
+    .progress-bar.p1 { background: linear-gradient(90deg, #267a12, #308F16); }
+    .progress-bar.p2 { background: linear-gradient(90deg, #308F16, #63AF4F); }
     .progress-bar.p3 { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
     .progress-bar.p4 { background: linear-gradient(90deg, #ef4444, #f87171); }
 
@@ -481,6 +478,7 @@
     ════════════════════════════════ */
     .why-not-test {
       padding: 100px 0;
+      background: #fff;
     }
 
     .why-grid {
@@ -494,19 +492,19 @@
       display: flex;
       gap: 20px;
       align-items: flex-start;
-      background: rgba(255,255,255,0.02);
-      border: 1px solid rgba(255,255,255,0.06);
+      background: #fff;
+      border: 1px solid var(--border);
       border-radius: 16px;
       padding: 28px;
       transition: border-color 0.25s;
     }
 
-    .why-item:hover { border-color: rgba(0, 200, 150, 0.3); }
+    .why-item:hover { border-color: var(--green); }
 
     .why-icon {
       width: 48px;
       height: 48px;
-      background: rgba(0, 200, 150, 0.12);
+      background: rgba(48,143,22,0.1);
       border-radius: 12px;
       display: flex;
       align-items: center;
@@ -523,7 +521,7 @@
 
     .why-text p {
       font-size: 14px;
-      color: var(--gray);
+      color: var(--text-secondary);
       line-height: 1.6;
     }
 
@@ -532,9 +530,9 @@
     ════════════════════════════════ */
     .countdown-section {
       padding: 60px 0;
-      background: linear-gradient(135deg, rgba(108,99,255,0.12) 0%, rgba(0,200,150,0.08) 100%);
-      border-top: 1px solid rgba(255,255,255,0.06);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+      background: linear-gradient(135deg, #308F16 0%, #63AF4F 100%);
+      border-top: none;
+      border-bottom: none;
     }
 
     .countdown-inner {
@@ -546,7 +544,7 @@
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--green);
+      color: rgba(255,255,255,0.85);
       margin-bottom: 12px;
     }
 
@@ -554,6 +552,7 @@
       font-size: clamp(20px, 3vw, 28px);
       font-weight: 800;
       margin-bottom: 32px;
+      color: #fff;
     }
 
     .countdown-blocks {
@@ -564,8 +563,8 @@
     }
 
     .cd-block {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
       border-radius: 16px;
       padding: 20px 28px;
       min-width: 90px;
@@ -575,14 +574,14 @@
     .cd-block .num {
       font-size: 40px;
       font-weight: 900;
-      color: var(--white);
+      color: #fff;
       line-height: 1;
       display: block;
     }
 
     .cd-block .lbl {
       font-size: 11px;
-      color: var(--gray);
+      color: rgba(255,255,255,0.75);
       text-transform: uppercase;
       letter-spacing: 0.08em;
       margin-top: 6px;
@@ -597,8 +596,8 @@
     }
 
     .cta-inner {
-      background: linear-gradient(135deg, rgba(108,99,255,0.15) 0%, rgba(0,200,150,0.08) 100%);
-      border: 1px solid rgba(108,99,255,0.25);
+      background: linear-gradient(135deg, #308F16 0%, #63AF4F 100%);
+      border: none;
       border-radius: 28px;
       padding: clamp(40px, 6vw, 72px);
       text-align: center;
@@ -609,11 +608,12 @@
       font-weight: 900;
       margin-bottom: 16px;
       letter-spacing: -0.02em;
+      color: #fff;
     }
 
     .cta-inner p {
       font-size: 17px;
-      color: var(--gray-light);
+      color: rgba(255,255,255,0.85);
       max-width: 480px;
       margin: 0 auto 48px;
     }
@@ -629,7 +629,7 @@
     }
 
     footer a {
-      color: var(--purple-light);
+      color: #fff;
       text-decoration: none;
     }
 
@@ -637,18 +637,18 @@
 
     .footer-copy {
       font-size: 14px;
-      color: var(--gray);
+      color: #666;
       margin-bottom: 8px;
     }
 
     .footer-promo {
       font-size: 13px;
-      color: var(--gray);
+      color: #555;
       margin-top: 8px;
     }
 
     .footer-promo span {
-      color: var(--green);
+      color: #63AF4F;
       font-weight: 600;
     }
 
@@ -703,15 +703,15 @@
   <section class="hero">
     <div class="geo-shapes">
       <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <polygon points="100,10 190,55 190,145 100,190 10,145 10,55" stroke="#6c63ff" stroke-width="1.5" fill="rgba(108,99,255,0.05)"/>
-        <polygon points="100,30 170,67 170,133 100,170 30,133 30,67" stroke="#6c63ff" stroke-width="1"/>
+        <polygon points="100,10 190,55 190,145 100,190 10,145 10,55" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" fill="rgba(255,255,255,0.04)"/>
+        <polygon points="100,30 170,67 170,133 100,170 30,133 30,67" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
       </svg>
       <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="20" y="20" width="80" height="80" rx="8" stroke="#00c896" stroke-width="1.5" fill="rgba(0,200,150,0.05)" transform="rotate(15 60 60)"/>
+        <rect x="20" y="20" width="80" height="80" rx="8" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" fill="rgba(255,255,255,0.04)" transform="rotate(15 60 60)"/>
       </svg>
       <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="40" cy="40" r="30" stroke="#6c63ff" stroke-width="1.5" fill="none"/>
-        <circle cx="40" cy="40" r="18" stroke="#6c63ff" stroke-width="1" fill="none"/>
+        <circle cx="40" cy="40" r="30" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="none"/>
+        <circle cx="40" cy="40" r="18" stroke="rgba(255,255,255,0.2)" stroke-width="1" fill="none"/>
       </svg>
     </div>
 
@@ -948,7 +948,7 @@
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
           Начать демо →
         </a>
-        <p style="margin-top:20px; font-size:15px; color:var(--gray-light);">
+        <p style="margin-top:20px; font-size:15px; color:var(--text-secondary);">
           <a href="https://www.gntpower.com/en#contact" style="color:var(--green); font-weight:600; text-decoration:underline; text-underline-offset:3px;">Напишите нам здесь</a>
           — и мы сделаем демо-ключ полностью бесплатным
         </p>
