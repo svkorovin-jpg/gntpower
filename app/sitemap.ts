@@ -39,5 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "https://gntpower.com/ru/kak-ponyat-svoi-silnye-storony", lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: "https://gntpower.com/ru/kak-opredelit-liderov-v-komande", lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: "https://gntpower.com/ru/primer-otcheta-soft-skills", lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    // Campaign landing pages
+    { url: "https://gntpower.com/free-trial-ca.html", lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
   ]
 }
