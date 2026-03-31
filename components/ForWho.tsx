@@ -1,4 +1,5 @@
 import FadeIn from "./FadeIn"
+import Card3D from "./Card3D"
 
 type Column = {
   heading: string
@@ -41,7 +42,9 @@ export default function ForWho({ title, managers, participants }: ForWhoProps) {
               <BulletList items={col.items} />
             </div>
           ))}
-          <img src="/what_for.png" alt="" className="hidden md:block h-[480px] w-auto" style={{ mixBlendMode: "multiply" }} />
+          <Card3D className="hidden md:block" intensity={6}>
+            <img src="/what_for.png" alt="" className="h-[480px] w-auto" style={{ mixBlendMode: "multiply" }} />
+          </Card3D>
         </div>
       </FadeIn>
     </section>

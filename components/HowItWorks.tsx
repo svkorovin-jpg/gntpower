@@ -1,4 +1,5 @@
 import FadeIn from "./FadeIn"
+import Card3D from "./Card3D"
 
 type Props = {
   title: string
@@ -48,7 +49,9 @@ export default function HowItWorks({ title, intro, items }: Props) {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-12">
           {["/Rectangle_124.png", "/Rectangle_125.jpg", "/Rectangle_126.jpg", "/Rectangle_127.jpg"].map((src, i) => (
-            <img key={i} src={src} alt="" className="w-full h-[140px] md:h-[180px] object-cover rounded-2xl hover:scale-[1.02] transition-transform duration-200" />
+            <Card3D key={i} intensity={5} className="rounded-2xl overflow-hidden">
+              <img src={src} alt="" className="w-full h-[140px] md:h-[180px] object-cover" />
+            </Card3D>
           ))}
         </div>
       </FadeIn>

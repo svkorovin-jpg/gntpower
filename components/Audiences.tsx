@@ -1,4 +1,5 @@
 import FadeIn from "./FadeIn"
+import Card3D from "./Card3D"
 
 type AudiencesProps = {
   title: string
@@ -30,7 +31,9 @@ export default function Audiences({ title, subtitle, items }: AudiencesProps) {
           </div>
         </div>
         <div className="hidden md:flex items-center justify-center">
-          <img src="/audience.png" alt="" className="w-full h-auto" style={{ mixBlendMode: "multiply" }} />
+          <Card3D intensity={6}>
+            <img src="/audience.png" alt="" className="w-full h-auto" style={{ mixBlendMode: "multiply" }} />
+          </Card3D>
         </div>
       </FadeIn>
     </section>

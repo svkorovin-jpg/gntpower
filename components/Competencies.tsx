@@ -1,5 +1,6 @@
 import Image from "next/image"
 import FadeIn from "./FadeIn"
+import Card3D from "./Card3D"
 
 const ICONS = ["🧩", "🎯", "⚡", "🤝"]
 const IMAGES: (string | null)[] = ["/systemic.png", "/result.png", "/adapt.png", "/comms.png"]
@@ -52,9 +53,9 @@ export default function Competencies({ title, items }: CompetenciesProps) {
               </div>
             )
             return (
-              <div
+              <Card3D
                 key={i}
-                className="bg-[#f7fdf4] border border-[#EDEDED] rounded-2xl overflow-hidden hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col md:flex-row"
+                className="bg-[#f7fdf4] border border-[#EDEDED] rounded-2xl overflow-hidden hover:shadow-lg flex flex-col md:flex-row"
               >
                 {imageLeft ? (
                   <>
@@ -68,7 +69,7 @@ export default function Competencies({ title, items }: CompetenciesProps) {
                     <div className="hidden md:flex flex-1">{imageBlock}</div>
                   </>
                 )}
-              </div>
+              </Card3D>
             )
           })}
         </div>
