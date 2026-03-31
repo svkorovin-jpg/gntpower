@@ -109,7 +109,7 @@ export default function Header({ nav, lang }: HeaderProps) {
         >
           <img
             src="/lk.svg"
-            alt="Client area"
+            alt={{ ua: "Особистий кабінет", ru: "Личный кабинет", en: "Client area" }[lang]}
             width="22"
             height="22"
             className="group-hover:brightness-0 group-hover:invert transition-all duration-200"

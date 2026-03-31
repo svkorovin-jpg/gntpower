@@ -14,13 +14,13 @@ export const messages = {
     subtitle:
       "A scientifically sound and effective way to assess the four leadership competencies",
     description:
-      "Discover your own super powers and receive a detailed report that will help you build your career!",
+      "Discover your own superpowers and receive a detailed report that will help you build your career!",
     button: "Try the game",
     buttonSecondary: "I have a key",
   },
 
   whySoftSkills: {
-    title: "Why do Soft Skills matter?",
+    title: "Why Soft Skills Matter",
     tagline: "Soft skills are the competencies of the 21st century",
     text: "Employers increasingly focus on them when selecting employees. A high level of soft-competency development leads to professional success and is the foundation for future achievements. Our assessment accurately measures the level of development of your competencies and shows which skills to develop to grow significantly faster.",
     button: "I want to try",
@@ -50,7 +50,7 @@ export const messages = {
 
   audiences: {
     title: "Who is the game for?",
-    subtitle: "How can I assess myself",
+    subtitle: "How can I assess myself?",
     items: [
       "Managers in private and public sectors, investors",
       "Employees of companies and institutions",
@@ -71,7 +71,7 @@ export const messages = {
       ],
     },
     participants: {
-      heading: "The test taker will learn:",
+      heading: "The test-taker will learn:",
       items: [
         "What roles and tasks you are best suited to",
         "How to predict your behaviour in standard situations",
@@ -81,7 +81,7 @@ export const messages = {
   },
 
   whyItWorks: {
-    title: "Why does it work?",
+    title: "Why It Works",
     items: [
       "The product is built on a scientific yet practice-backed methodology.",
       "Product development included rigorous research and consultations.",
@@ -92,7 +92,7 @@ export const messages = {
   },
 
   how: {
-    title: "How does the testing work?",
+    title: "How the Assessment Works",
     intro: "G&T Power is designed so that the assessment of each competency is as accurate and reliable as possible.",
     items: [
       "The game is a sequence of situations that form a cohesive storyline.",
@@ -105,7 +105,7 @@ export const messages = {
   },
 
   whatYouGet: {
-    title: "What will you get?",
+    title: "What You Get",
     intro: "The result is a detailed report containing an individual competency profile with thorough explanations.",
     text: "You will have a complete picture of your soft competencies, which will help you build an effective self-development plan, assess your strengths for tackling diverse challenges, and start moving towards your goals faster.",
   },
@@ -156,7 +156,7 @@ export const messages = {
       sending: "Sending...",
       success: "Message sent! We'll get back to you soon.",
       error: "Failed to send. Please try again.",
-      privacyPre: "By submitting this form you agree to your data being processed in accordance with our",
+      privacyPre: "By submitting this form, you agree to your data being processed in accordance with our",
       privacyLink: "Privacy Policy",
       privacyPost: ". We will use your details solely to respond to your enquiry.",
       privacyUrl: "/en/privacy",
